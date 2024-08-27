@@ -1,0 +1,32 @@
+basePath: /
+definitions:
+  models.User:
+    properties:
+      email:
+        type: string
+      id:
+        type: string
+      name:
+        type: string
+    type: object
+host: localhost:8081
+info:
+  contact: {}
+  description: This is a sample user service API.
+  title: User Service API
+  version: "1.0"
+paths:
+  /profile:
+    get:
+      description: Get user profile by user ID
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.User'
+      summary: Get user profile
+      tags:
+      - user
+swagger: "2.0"
